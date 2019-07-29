@@ -1,36 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+
   <title>Frontend Mentor | Beta sign up split layout Challenge</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-  All your files in one secure location, accessible anywhere.
+  <div class="wrapper">
+    <aside class="side-graph">
+      <img src="./images/illustration-main.svg" alt="man with key">
+    </aside>
+    <main class="main">
+      <div class="top-bar">
+          <svg class="top-bar__logo" width="120" height="35" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M.01.021h67.924V34.93H.01z"/></defs><g fill="none" fill-rule="evenodd"><path d="M0 10.215v.088l20.205 9.492 20.277-9.524v-.024L20.205.723 0 10.215zm7.284.044l12.922-6.07 12.922 6.07-12.923 6.07-12.92-6.07zm12.921 13.223L0 14.132v3.458l20.205 9.372 20.277-9.404V14.1l-20.277 9.382zm0 7.014L0 21.145v3.458l20.205 9.373 20.277-9.405v-3.458l-20.277 9.383z" fill="#BDBAFA"/><g transform="translate(52.048)"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path class="top-bar__logo__text" d="M63.296 17.46a5.856 5.856 0 0 0-1.562-4.03 5.247 5.247 0 0 0-1.69-1.208 4.962 4.962 0 0 0-2.062-.436c-.73 0-1.417.145-2.061.436a5.246 5.246 0 0 0-1.691 1.208 5.857 5.857 0 0 0-1.562 4.03 5.857 5.857 0 0 0 1.562 4.029 5.246 5.246 0 0 0 1.69 1.208c.645.29 1.332.435 2.062.435.73 0 1.417-.145 2.061-.435a5.247 5.247 0 0 0 1.691-1.208 5.856 5.856 0 0 0 1.562-4.03zm4.638 0c0 1.396-.258 2.69-.773 3.883a9.468 9.468 0 0 1-2.126 3.095c-.902.87-1.96 1.558-3.172 2.063a9.996 9.996 0 0 1-3.881.757 9.878 9.878 0 0 1-3.865-.757 10.021 10.021 0 0 1-3.156-2.08 9.652 9.652 0 0 1-2.126-3.11c-.515-1.192-.773-2.476-.773-3.852a9.36 9.36 0 0 1 .79-3.82 10.063 10.063 0 0 1 2.141-3.126 9.883 9.883 0 0 1 3.156-2.095 9.796 9.796 0 0 1 3.833-.757c1.374 0 2.668.252 3.88.757a10.115 10.115 0 0 1 3.173 2.063 9.426 9.426 0 0 1 2.126 3.11 9.722 9.722 0 0 1 .773 3.868zm-21.482 9.218a6.217 6.217 0 0 1-1.24.42c-.462.107-.94.16-1.433.16a7.114 7.114 0 0 1-1.98-.274 4.34 4.34 0 0 1-1.66-.886c-.472-.408-.848-.94-1.127-1.596-.279-.655-.418-1.445-.418-2.369V.021h4.734v21.306c0 .774.156 1.306.467 1.596.311.29.682.435 1.111.435.537 0 1.052-.161 1.546-.483v3.803zM36.5 8.112l-8.374 22.144c-.622 1.655-1.438 2.847-2.447 3.578-1.01.73-2.212 1.096-3.607 1.096a5.744 5.744 0 0 1-1.45-.194l-1.546-4.319c.365.172.741.306 1.128.403a4.52 4.52 0 0 0 1.095.145 4.05 4.05 0 0 0 1.996-.5c.602-.333 1.063-.95 1.385-1.853l.644-1.87-7.182-18.63H23.2l4.283 11.99 4.026-11.99H36.5zM17.015 5.308H4.905v5.995h11.95v4.061H4.904v11.41H.01V1.022h17.005v4.287z" fill="#000" mask="url(#b)"/></g></g></svg>
+        <ul class="social-icons">
+          <li class="icon icon1"><a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="icon__svg" d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+          </a></li>
+          <li class="icon icon2"><a href="#">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="icon__svg" d="M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z"/></svg> -->
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+               <g><g>
+            		<path class="icon__svg" d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z"/>
+            	</g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            </svg>
+          </a></li>
+          <li class="icon icon3"><a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="icon__svg" d="M437.332 80H74.668C51.199 80 32 99.198 32 122.667v266.666C32 412.802 51.199 432 74.668 432h362.664C460.801 432 480 412.802 480 389.333V122.667C480 99.198 460.801 80 437.332 80zM432 170.667L256 288 80 170.667V128l176 117.333L432 128v42.667z"/></svg>
+          </a></li>
+        </ul>
+      </div>
 
-  Fylo stores all your most important files in one secure location. 
-  Access them wherever you need, share and collaborate with friends, 
-  family and co-workers.
+      <div class="center">
+        <h1>
+          All your files in one secure location, accessible anywhere.
+        </h1>
 
-  Sign up for early access
+        <p>
+          Fylo stores all your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends,
+          family and co-workers.
+        </p>
 
-  Sign Up
+        <div class="signup">
+          <h3>
+            Sign up for early access
+          </h3>
+          <form method="GET" class="signup__form">
+            <input type="text" class="signup__input">
+            <input type="submit" value="Sign Up" class="signup__submit">
+          </form>
+        </div>
+      </div>
 
-  Privacy Policy
+
+
+      <a class="privacy" href="#">Privacy Policy</a>
+    </main>
+
+  </div>
+
 
   <footer>
     <p class="attribution">
       This page started life as a challenge on <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> 🎉
     </p>
   </footer>
+
+  <script type="text/javascript">
+    const submitBtn = document.querySelector('.signup__submit');
+    submitBtn.addEventListener('click', (e) => e.preventDefault())
+  </script>
 </body>
+
 </html>
