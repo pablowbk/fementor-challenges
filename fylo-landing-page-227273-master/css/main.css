@@ -240,21 +240,25 @@ footer {
     top: 0;
     right: 0;
     left: 0;
-    padding: 3em;
+    padding: 2em;
   }
 
   .top-bar__logo__text, .icon__svg {
     fill: #fff;
   }
 
+  .icon {
+    padding: 10px 0;
+  }
+
   .icon a {
     height: 24px;
     width: 24px;
-    margin: 0 .8em;
+    margin: 0 .5em;
   }
 
   .main {
-    padding: 0 3em;
+    padding: 0 2em;
   }
 
   .center p {
@@ -283,6 +287,6 @@ footer {
 
   .privacy {
     align-self: end;
-    margin-bottom: 3em;
+    margin: 3em 0 2em; 
   }
 }
